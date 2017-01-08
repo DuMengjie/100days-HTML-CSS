@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500);
+html {
+  background-color: #f8e9da;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  -webkit-transition: color 250ms ease-in-out;
+  -moz-transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
+  color: #50b2fb;
+  position: relative;
+  text-decoration: none;
+}
+a:hover {
+  color: #0691f9;
+}
+
+.modal {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fefcfa;
+  border-radius: 10px;
+  box-shadow: 0px 50px 100px 15px #cead89;
+  color: #737373;
+  display: none;
+  font-size: 16px;
+  left: 50%;
+  line-height: 1.5;
+  max-width: 560px;
+  min-height: 200px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 1000;
+}
+.modal__button {
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  background-color: #fdf3e9;
+  color: #818994;
+  display: block;
+  line-height: 70px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+.modal__button:before {
+  content: attr(data-text);
+  position: relative;
+  z-index: 10;
+}
+.modal__button:after {
+  -webkit-transition: top 250ms ease-in-out;
+  -moz-transition: top 250ms ease-in-out;
+  transition: top 250ms ease-in-out;
+  background-color: #fbe6d2;
+  content: '';
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 5;
+}
+.modal__button:hover {
+  color: #fefcfa;
+}
+.modal__button:hover:after {
+  top: 0;
+}
+.modal__button:focus {
+  background-color: #fefcfa;
+  color: #CCCDCE;
+}
+.modal__button:focus:after {
+  top: 100%;
+}
+[class*='-2-col'] .modal__button:first-child {
+  border-right: 1px solid #fefcfa;
+}
+[class*='-2-col'] .modal__button:last-child {
+  border-left: 1px solid #fefcfa;
+}
+.modal__content {
+  color: #666666;
+  font-weight: 500;
+  padding: 45px 50px 30px;
+}
+.modal__content p {
+  margin-bottom: 20px;
+}
+.modal__content p:last-child {
+  margin-bottom: 0;
+}
+.modal__content p.is-light {
+  color: #CCCDCE;
+  font-weight: 400;
+}
+.modal__content p.has-extra-margin-bottom {
+  margin-bottom: 40px;
+}
+
+[class*='-2-col']::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+[class*='-2-col'] > * {
+  float: left;
+  width: 50%;
+}
+
+.open-modal {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: none;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+}

@@ -1,0 +1,237 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700);
+
+html,
+body {
+  height: 100%;
+}
+
+h3{
+  display: none;
+  font-weight:400;
+}
+
+body {
+  position: relative;
+  background: #d5eef8;
+  background: #d5eef8;
+  background: #d5eef8;
+  background: -moz-linear-gradient(-45deg, #d5eef8 20%, #f6c2c2 20%, #f6c2c2 80%, #a1dbef 80%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(20%, #d5eef8), color-stop(20%, #f6c2c2), color-stop(80%, #f6c2c2), color-stop(80%, #a1dbef));
+  background: -webkit-linear-gradient(-45deg, #d5eef8 20%, #f6c2c2 20%, #f6c2c2 80%, #a1dbef 80%);
+  background: -o-linear-gradient(-45deg, #d5eef8 20%, #f6c2c2 20%, #f6c2c2 80%, #a1dbef 80%);
+  background: -ms-linear-gradient(-45deg, #d5eef8 20%, #f6c2c2 20%, #f6c2c2 80%, #a1dbef 80%);
+  background: linear-gradient(135deg, #d5eef8 20%, #f6c2c2 20%, #f6c2c2 80%, #a1dbef 80%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d5eef8', endColorstr='#a1dbef', GradientType=1);
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+  max-width: calc(235px * 3);
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*the error of 1px margin in div*/
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 100px;
+    margin: initial;
+    color: rgba(255,255,255,0.80);
+    font-weight: 700;
+}
+
+p{
+  color:#fff;
+  font-weight:100;
+}
+p span{
+  font-weight:400;
+  display:inline-block;
+  margin-bottom:3px;
+}
+
+.container {
+  position: relative;
+  box-shadow: 20px 25px 80px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 3px 3px;
+  display:flex;
+}
+
+.left {
+  content: "";
+  position: absolute;
+  left: -80px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.2);
+  border-radius: 4px 0px 0px 4px;
+}
+
+.arRight {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #796161;
+  top: 32px;
+  left: 34px;
+}
+
+.right {
+  content: "";
+  position: absolute;
+  right: -80px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 4px 4px 0px;
+}
+
+.arLeft {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #796161;
+  top: 32px;
+  left: 34px;
+}
+
+.container>div {
+  width: 235px;
+  height: 260px;
+}
+
+.time {
+  position: relative;
+  background: #433f40;
+  border-radius: 0 0 0 3px;
+}
+
+.temperature {
+  position: relative;
+  background: #343233;
+}
+
+.load {
+  position: relative;
+  background: #222021;
+  border-radius: 0 0 3px 0;
+}
+
+fieldset {
+  position: absolute;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: -webkit-translate(-50%, -50%);
+}
+
+fieldset legend {
+  color: #f6c2c2;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+select {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: -5px;
+}
+
+button {
+  position: absolute;
+  background-color: #191718;
+  border: none;
+  left: calc(50% - 94px);
+  bottom: -25px;
+  padding: 22px 73px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 20px 45px 75px rgba(224, 84, 84, 0.4);
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+button:hover {
+  background-color: #69525D;
+}
+/*css x anteprima*/
+
+@media only screen and (max-width: 1000px) {
+  .container>div {
+    width: 225px;
+    height: 230px;
+    float: left;
+}
+}
+
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    min-width: calc(135px * 3);
+  }
+  .container {
+    min-height: 160px;
+  }
+  .container>div {
+    width: 135px;
+    height: 160px;
+    float: left;
+  }
+  button {
+    left: calc(50% - 54px);
+    bottom: -17px;
+    padding: 12px 34px;
+  }
+  .right {
+    right: -50px;
+    width: 50px;
+    height: 50px;
+  }
+  .left {
+    left: -50px;
+    width: 50px;
+    height: 50px;
+  }
+  .arLeft {
+    top: 18px;
+    left: 22px;
+  }
+  .arRight {
+    top: 18px;
+    left: 21px;
+  }
+  h2,
+  p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    display: none;
+  }
+  
+  h3{
+    display: inherit;
+    text-align: center;
+  }
+  
+  .wrapper {
+    min-width: initial;
+  }
+}

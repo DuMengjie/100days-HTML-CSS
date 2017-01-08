@@ -1,0 +1,174 @@
+body {
+  background-image: url(http://themes.radiumthemes.com/wp/metrocorp/wp-content/themes/metrocorp/assets/images/patterns/pattern_rad.png);
+  background-color: #263238;
+  font-family: 'Source Sans Pro';
+  padding: 32px 64px;
+}
+
+.inspiration {
+  color: rgba(255, 255, 255, .8);
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+.inspiration a {color: rgba(255, 255, 255, .8);}
+
+.inspiration a:hover {color: rgba(255, 255, 255, .5);}
+
+.inspiration a:active {color: rgba(255, 255, 255, .3);}
+
+.wrapper {
+  background: #FF9800;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px 1px rgba(0,0,0,.2);
+  margin: auto;
+  position: relative;
+  width: 600px;
+}
+
+h1 {
+  color: rgba(0, 0, 0, .6);
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 0 12px;
+  padding: 48px;
+}
+
+.close {
+  cursor: pointer;
+  padding: 24px;
+  position: absolute;
+  right: 36px;
+  top: 36px;
+}
+
+.close::before,
+.close::after {
+  background: #CC7A00;
+  border-radius: 4px;
+  content: "";
+  display: block;
+  height: 20px;
+  position: absolute;
+  width: 3px;
+}
+
+.close:hover::before,
+.close:hover::after {
+  background: #995B00;
+}
+
+.close:active::before,
+.close:active::after {
+  background: #663D00;
+}
+
+.close::before {transform: rotate(45deg) translate(-6px, -6px);}
+
+.close::after {transform: rotate(-45deg) translate(6px, -6px);}
+
+form {text-align: right;}
+
+.button {
+  background: none;
+  border: none;
+  color: rgba(0,0,0,.4);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 8px;
+  padding: 16px;
+  width: auto;
+}
+
+.button:focus {
+  border: none;
+  color: rgba(0,0,0,.6);
+  outline: none;
+}
+
+.button:hover {
+  border: none;
+  color: rgba(0,0,0,.6);
+}
+
+.button:active {color: rgba(0,0,0,.8);}
+
+.content {
+  background: #FFF;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px 1px rgba(0,0,0,.2);
+  font-size: 0;
+  padding: 16px 48px 32px;
+  position: relative;
+  transform: translateX(48px);
+  width: 600px;
+}
+
+.photo {
+  background-image: url(https://pmcdeadline2.files.wordpress.com/2015/01/margot-robbie-good-photo.jpg?w=340&h=299&crop=1);
+  background-size: cover;
+  border-radius: 120px;
+  border: solid #FFF 8px;
+  height: 120px;
+  margin: auto;
+  margin-top: -85px;
+  text-align: center;
+  width: 120px;
+}
+
+.inputfield {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.inputfield.halfwidth {width: 50%;}
+
+input {
+  border: none;
+  border-bottom: solid 1px #DDD;
+  box-sizing: border-box;
+  color: #444;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 2;
+  margin: 24px 0;
+  padding-right: 8px;
+  width: 100%;
+}
+
+input:focus {
+  border-bottom: solid 1px #FFB74D;
+  outline: none;
+}
+
+label {
+  color: #9E9E9E;
+  font-size: 16px;
+  font-weight: 500;
+  left: 0px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 32px;
+  transition: ease all .4s;
+}
+
+input:valid + label {
+  color: #9E9E9E;
+  font-size: 14px;
+  font-weight: 400;
+  top: 8px;
+}
+
+input:focus + label,
+input:active + label {
+  color: #F57C00;
+  font-size: 14px;
+  font-weight: 500;
+  top: 8px;
+}

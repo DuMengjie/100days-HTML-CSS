@@ -1,0 +1,85 @@
+'use strict';
+
+var $days = $('.round-list.days');
+var $months = $('.round-list.months');
+var $years = $('.round-list.years');
+var $events = $('.events-container');
+var $dots = $('.dots');
+
+populateCalendar();
+positionDigits();
+showEvent(0);
+
+$dots.on('click', 'li', function () {
+    showEvent($(this).index());
+});
+
+function showEvent(index) {
+    var $event = $events.children().eq(index);
+    $events.children().removeClass('current move-left');
+    $event.addClass('current').prevAll().addClass('move-left');
+    $dots.children().removeClass('current').eq(index).addClass('current');
+
+    var date = new Date($event.data('date'));
+    rotateListToDigit($days, date.getDate());
+    rotateListToDigit($months, date.getMonth());
+    rotateListToDigit($years, date.getFullYear());
+}
+
+function rotateListToDigit(list, digit) {
+    var current = list.children('[data-value="' + digit + '"]').addClass('current');
+    var angleDelta = 360 / list.children().length;
+    var rotation = -angleDelta * current.index();
+    current.siblings().removeClass('current');
+    list.css('transform', 'rotate(' + rotation + 'deg)');
+}
+
+function populateCalendar() {
+    // populate days
+    for (var i = 1; i <= 31; i++) {
+        $days.append('<li data-value="' + i + '">' + i + '</li>');
+    }
+    // populate months
+    'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ').forEach(function (month, i) {
+        return $months.append('<li data-value="' + i + '">' + month + '</li>');
+    });
+    // populate years
+    var year = new Date().getFullYear();
+    for (var i = 0; i < 18; i++) {
+        $years.append('<li data-value="' + (year + i) + '">' + (year + i) + '</li>');
+    }
+}
+
+function positionDigits() {
+    // position days digits
+    positionDigitsOf($days);
+    positionDigitsOf($months);
+    positionDigitsOf($years);
+}
+
+function positionDigitsOf(list) {
+    var angleDelta = 360 / list.children().length;
+    list.children().each(function (i) {
+        var angle = 180 - angleDelta * i;
+        var position = getPointAtAngle(angle, list.width() / 2);
+        positionDigitAt($(this), position, angle);
+    });
+}
+
+function positionDigitAt(digit, position, angle) {
+    var transform = ['translate(' + position.x + 'px, ' + position.y + 'px)', 'rotate(' + (180 - angle) + 'deg)'];
+    digit.css('transform', transform.join(' '));
+}
+
+function getPointAtAngle(angle, distance) {
+    angle = deg2rad(angle);
+    return { x: Math.sin(angle) * distance, y: Math.cos(angle) * distance };
+}
+
+function deg2rad(angle) {
+    return angle * (Math.PI / 180);
+}
+
+function rad2deg(angle) {
+    return angle * (180 / Math.PI);
+}

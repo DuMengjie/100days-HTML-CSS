@@ -1,0 +1,144 @@
+// custom styles
+
+.card {
+	flex: 0 0 700px;
+	height: 490px;
+	background: $color2;
+	position: relative;
+	&:after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 18%;
+		background: url('../img/d007-shadow.png') no-repeat;
+		background-size: 100%;
+		z-index: -1;
+		opacity: .8;
+	}
+}
+
+.flexslider {
+	border: none;
+	border-radius: none;
+	background: $color2;
+}
+
+.flexslider .slides li {
+	display: flex !important;
+	z-index: 10;
+	background: url('../img/d007-quote.png') no-repeat left 50px top 60px;
+}
+
+.flexslider .slides img {
+	opacity: .22;
+	flex: 0 0 170px;
+	height: 100%;
+}
+
+.right {
+	@extend %flex;
+	flex: 0 0 530px;
+	flex-wrap: wrap;
+	width: 100%;
+	background: $color1;
+	color: $color3;
+	padding-top: 60px;
+	padding-left: 40px;
+	span {
+		display: block;
+		line-height: 1;
+		padding: 3px 0;
+	}
+	.quote, .author {
+		flex: 0 0 100%;
+	}
+	.quote {
+		font-size: 62px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.author {
+		align-self: flex-end;
+		padding-bottom: 30px;
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+}
+
+.flex-active-slide .quote {
+  animation-duration: .5s;
+	animation-name: slideInRight;
+  animation-fill-mode: both;
+}
+
+.flex-active-slide span.author {
+	animation-duration: .5s;
+	animation-name: fadeIn;
+	animation-fill-mode: both;
+}
+
+.flex-direction-nav {
+	@extend %flex;
+	position: absolute;
+	bottom: 20px;
+	left: 44px;
+}
+
+.flex-direction-nav a {
+	@include hide-text;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 15px;
+	height: 23px;
+	background: url('../img/d007-arrows.png') no-repeat;
+	opacity: 1;
+	&:before {
+		display: none;
+	}
+}
+.flex-direction-nav .flex-prev {
+	background-position: 0 0;
+	left: 0;
+}
+.flex-direction-nav .flex-next {
+	background-position: -16px 0;
+	margin-left: 50px;
+	right: 0;
+}
+
+button.like {
+	min-width: 65px;
+	min-height: 30px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: url('../img/d007-heart.png') no-repeat left 12px center rgba(0,0,0, .1);
+	padding-left: 30px;
+	border-radius: 20px;
+	border: none;
+	font-size: 12px;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

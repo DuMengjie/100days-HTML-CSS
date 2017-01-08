@@ -1,0 +1,25 @@
+.knob
+    .knob-outer
+        .knob-inner
+            .knob-arrow.up
+            .knob-value 0
+            .knob-arrow.down
+            .knob-value-progress
+        .knob-indicator.contrast(data-angle="0")
+        .knob-indicator.brightness(data-angle="0")
+    .progress-label.contrast Contrast
+    .progress-label.brightness Brightness
+    svg.progress-bars(width="500", height="500")
+        //- contrast progress bar
+        path(d="M 240 445 A 190 195 0 1 1 240 55" fill="transparent" 
+            stroke="#dbdbdb" stroke-width="10" stroke-linecap="round")
+        path(d="M 240 445 A 190 195 0 1 1 240 55" fill="transparent" 
+            stroke="#f47231" stroke-width="10" stroke-linecap="round"
+            stroke-dasharray="605 605" id="contrast-progress")
+
+        //- brightness progress bar 
+        path(d="M 260 445 A 190 195 0 1 0 260 55" fill="transparent" 
+            stroke="#dbdbdb" stroke-width="10" stroke-linecap="round")
+        path(d="M 260 445 A 190 195 0 1 0 260 55" fill="transparent" 
+            stroke="#208ef4" stroke-width="10" stroke-linecap="round"
+            stroke-dasharray="605 605" id="brightness-progress")

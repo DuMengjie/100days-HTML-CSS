@@ -1,0 +1,261 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Open Sans", sans-serif;
+  background-color: #fa4e4e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+img, embed, object, video, svg {
+  max-width: 100%;
+}
+
+input, textarea {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+body, header, .meta, .content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  -webkit-flex: 0 0 900px;
+      -ms-flex: 0 0 900px;
+          flex: 0 0 900px;
+  position: relative;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 55px;
+  padding-top: 50px;
+  color: #666666;
+  background: white;
+  box-shadow: 0 11px 10px rgba(0, 0, 0, 0.48);
+  border-radius: 10px 10px 0 0;
+}
+
+h1 {
+  font-size: 72px;
+  color: #000;
+  font-family: 'Roboto Condensed';
+}
+
+/* - Header --------- */
+header {
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 40px 0 60px;
+}
+
+button {
+  outline: 0;
+  font-weight: 700;
+  background: transparent;
+}
+
+button.burger {
+  border: none;
+}
+
+button.burger span,
+button.burger span:before,
+button.burger span:after {
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  transition: .4s;
+  background: #666666;
+}
+
+button.burger span {
+  text-indent: -9999px;
+  position: relative;
+}
+
+button.burger span:before,
+button.burger span:after {
+  content: '';
+  position: absolute;
+  left: 4px;
+}
+
+button.burger span:before {
+  top: -4px;
+}
+
+button.burger span:after {
+  top: 4px;
+}
+
+button.burger:hover span:after,
+button.burger:hover span:before,
+button.burger:focus span:after,
+button.burger:focus span:before {
+  left: 0;
+}
+
+button.follow {
+  width: 80px;
+  height: 30px;
+  text-transform: uppercase;
+  font-size: 13px;
+  border-radius: 20px;
+  border: 1px solid #55e1b4;
+  color: #55e1b4;
+}
+
+/* - Meta --------- */
+.meta {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 34px 45px 130px 60px;
+}
+
+.meta h1 {
+  margin-left: 90px;
+  margin-right: 125px;
+}
+
+.square {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  font-family: 'Roboto';
+  font-size: 18px;
+}
+
+.post-date {
+  padding: 10px;
+  background: #55e1b4;
+  color: white;
+}
+
+.post-date span {
+  position: absolute;
+  bottom: 17px;
+  line-height: 1.3;
+}
+
+.post-date span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 10px;
+  height: 2px;
+  background: white;
+}
+
+.like {
+  margin-top: 40px;
+  text-indent: -9999px;
+  border-left: 5px solid #feeded;
+  background: url("../img/d018-heart.png") no-repeat center;
+}
+
+a.arrow {
+  max-width: 20px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url("../img/d018-arrow.png") no-repeat center;
+}
+
+/* - Content --------- */
+.content p {
+  margin-bottom: 30px;
+}
+
+.content p:first-of-type {
+  font-size: 18px;
+}
+
+.content p:first-of-type:first-letter {
+  float: left;
+  color: #fa4e4e;
+  font-size: 48px;
+  font-style: italic;
+  line-height: 60px;
+  margin-top: -4px;
+  margin-left: -8px;
+  margin-bottom: -10px;
+  padding-right: 10px;
+}
+
+.content p:last-of-type {
+  line-height: 1.2;
+}
+
+.featured {
+  -webkit-flex: 0 0 380px;
+      -ms-flex: 0 0 380px;
+          flex: 0 0 380px;
+  position: relative;
+}
+
+.featured a {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 50px;
+  background: url("../img/d018-expand.png") no-repeat center #fff;
+  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.16);
+}
+
+.featured img {
+  height: auto;
+  vertical-align: bottom;
+}
+
+.text {
+  padding: 0 50px;
+}
+
+blockquote {
+  text-align: center;
+  margin: 40px 0 0;
+  font-size: 24px;
+  font-style: italic;
+  color: #fa4e4e;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,141 @@
+body, html {
+  height: 100%;
+  min-height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  background: url("../img/d091-bg.png") no-repeat center;
+  background-size: cover;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(800px);
+          transform: perspective(800px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+img, embed, object, video, svg {
+  max-width: 100%;
+}
+
+input, textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  -webkit-flex: 0 0 830px;
+      -ms-flex: 0 0 830px;
+          flex: 0 0 830px;
+  height: 480px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 17px 0 163px black, 10px 0 163px rgba(0, 0, 0, 0.66), 57px 0 215px rgba(209, 158, 122, 0.1);
+  text-align: center;
+}
+
+span {
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  color: white;
+}
+
+span[class*="layer-"] {
+  display: block;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  transition: 0.1s;
+}
+
+.layer-1 {
+  font-size: 14px;
+  margin: 80px 0 65px;
+  position: relative;
+}
+
+.layer-1:after,
+.layer-1:before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: white;
+  opacity: .12;
+  display: block;
+  position: absolute;
+  top: 7px;
+}
+
+.layer-1:after {
+  left: 43%;
+}
+
+.layer-1:before {
+  right: 43%;
+}
+
+.layer-2,
+.layer-3 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.layer-4 {
+  font-size: 24px;
+  color: #1ed68f;
+  margin-top: 20px;
+  margin-bottom: 85px;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  background: #474a51;
+  border: none;
+  color: white;
+  outline: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+/*# sourceMappingURL=style.css.map */

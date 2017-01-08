@@ -1,0 +1,171 @@
+body, html {
+  height: 100%;
+  min-height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  background: url("../img/d022-bg.png") no-repeat center;
+  background-size: 100%;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+img, embed, object, video, svg {
+  max-width: 100%;
+}
+
+input, textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+body, .card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  -webkit-flex: 0 0 880px;
+      -ms-flex: 0 0 880px;
+          flex: 0 0 880px;
+  height: 612px;
+  position: relative;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #666666;
+}
+
+h1, h2, h3 {
+  color: #333333;
+}
+
+h2, h3 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: "Playfair Display", georgia;
+  font-size: 60px;
+  line-height: 0.8;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+h3 {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+h3:last-of-type {
+  margin-top: 50px;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  width: 100%;
+  height: 42px;
+  margin-top: 120px;
+  font-size: 12px;
+  border: none;
+  background: white;
+  text-transform: uppercase;
+  outline: 0;
+}
+
+.tabs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.tabs li {
+  opacity: .3;
+  margin-bottom: 25px;
+}
+
+.tabs li a {
+  color: #000;
+}
+
+.tabs li.active {
+  opacity: 1;
+}
+
+.mouse {
+  -webkit-flex: 0 0 505px;
+      -ms-flex: 0 0 505px;
+          flex: 0 0 505px;
+  position: relative;
+  text-align: right;
+  background: url("../img/d022-layers.png") no-repeat right center;
+}
+
+.mouse img {
+  width: auto;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.mouse:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/d022-dots.png") no-repeat right 59% top;
+}
+
+.info {
+  -webkit-flex: 0 0 240px;
+      -ms-flex: 0 0 240px;
+          flex: 0 0 240px;
+  margin-left: 70px;
+}
+/*# sourceMappingURL=style.css.map */

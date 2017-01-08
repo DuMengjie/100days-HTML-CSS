@@ -1,0 +1,19 @@
+{
+  "name": "100daysui",
+  "version": "1.0.0",
+  "description": "100daysui Template =========",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.6.0",
+    "grunt-sass": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabi Cotovanu",
+  "license": "ISC"
+}

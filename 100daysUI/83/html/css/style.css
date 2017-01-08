@@ -1,0 +1,158 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  line-height: inherit;
+}
+
+.card-wrap {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
+@media (min-width: 681px) {
+  .card-wrap {
+    width: 680px;
+  }
+}
+.card-wrap .card-social {
+  margin-bottom: 60px;
+}
+@media (min-width: 681px) {
+  .card-wrap .card-social {
+    float: left;
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+}
+.card-wrap .card-social:last-child {
+  margin: 0;
+}
+
+.card-social {
+  color: #a7a7a7;
+  display: block;
+  font-size: 14px;
+  height: 200px;
+  line-height: 1.5;
+  position: relative;
+  width: 200px;
+}
+.card-social:hover .card-social__icon {
+  font-size: 60px;
+}
+.card-social__front, .card-social__back {
+  border-radius: 3px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.card-social__front {
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.card-social__back {
+  box-shadow: 0 0 90px 15px rgba(0, 0, 0, 0.1);
+}
+.card-social__icon {
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
+.card-social__data {
+  bottom: 40px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.card-social__action {
+  bottom: 0;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 40px;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.card-social--animate-top-left:hover .card-social__front {
+  left: -40px;
+  top: -40px;
+}
+.card-social--animate-top-left .card-social__action {
+  right: 40px;
+}
+
+.card-social--animate-up:hover .card-social__front {
+  top: -40px;
+}
+.card-social--animate-up .card-social__back {
+  left: 10px;
+  right: 10px;
+  width: auto;
+}
+.card-social--animate-up .card-social__action {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.card-social--animate-top-right:hover .card-social__front {
+  left: 40px;
+  top: -40px;
+}
+.card-social--animate-top-right .card-social__action {
+  left: 40px;
+}
+
+.card-social--facebook .card-social__back {
+  background-color: #334a87;
+}
+.card-social--facebook .card-social__icon {
+  color: #334a87;
+}
+
+.card-social--twitter .card-social__back {
+  background-color: #18a7eb;
+}
+.card-social--twitter .card-social__icon {
+  color: #18a7eb;
+}
+
+.card-social--instagram .card-social__back {
+  background-color: #134876;
+}
+.card-social--instagram .card-social__icon {
+  color: #134876;
+}

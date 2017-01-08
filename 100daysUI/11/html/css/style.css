@@ -1,0 +1,289 @@
+/** Mixin Definitions **/
+/** Base Styles **/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+/** Base Calendar Styles **/
+.calendar {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 71rem;
+  height: 71rem;
+  padding: 3rem;
+  position: relative;
+  border-radius: 50%;
+  background-color: #000;
+  background-clip: content-box;
+  overflow: hidden;
+}
+.calendar::before {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  right: 3rem;
+  bottom: 3rem;
+  border-radius: 50%;
+  background: #000 url("http://i1067.photobucket.com/albums/u422/arnellebalane/background_zpswabqqadm.jpg") center center no-repeat;
+  opacity: 0.05;
+}
+.calendar * {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+/** Round List Styles **/
+.round-list {
+  border-radius: 50%;
+  color: #545247;
+  -webkit-transition: -webkit-transform 500ms ease-out;
+  transition: -webkit-transform 500ms ease-out;
+  transition: transform 500ms ease-out;
+  transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+}
+.round-list.years {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.25rem;
+}
+.round-list.months {
+  position: absolute;
+  top: 7rem;
+  left: 7rem;
+  right: 7rem;
+  bottom: 7rem;
+}
+.round-list.days {
+  position: absolute;
+  top: 13.5rem;
+  left: 13.5rem;
+  right: 13.5rem;
+  bottom: 13.5rem;
+}
+.round-list li {
+  position: absolute;
+  text-align: center;
+  -webkit-transition: color 500ms ease-out;
+  transition: color 500ms ease-out;
+}
+.round-list li.current {
+  color: #000;
+}
+.round-list.days li {
+  width: 1.8rem;
+  top: calc(50% - 0.8rem);
+  left: calc(50% - 0.9rem);
+  font-size: 1.5rem;
+}
+.round-list.months li {
+  width: 5rem;
+  top: calc(50% - 0.8rem);
+  left: calc(50% - 2.5rem);
+  font-size: 1.6rem;
+  text-indent: 0.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+.round-list.years li {
+  width: 8.6rem;
+  top: calc(50% - 1rem);
+  left: calc(50% - 4.3rem);
+  font-size: 2rem;
+  text-indent: 0.5rem;
+  letter-spacing: 1rem;
+}
+/** Event Details Styles **/
+.details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 20.5rem;
+  left: 20.5rem;
+  right: 20.5rem;
+  bottom: 20.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #6e6424;
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+.details h1 {
+  margin-bottom: 2.4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.8rem;
+  color: #fff;
+  opacity: 0.2;
+}
+.details a {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #dbbf32;
+}
+.events-container {
+  width: 100%;
+  height: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.events-container .event {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: visibility 300ms ease-out, opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: visibility 300ms ease-out, opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+  transition: transform 500ms ease-out, visibility 300ms ease-out, opacity 300ms ease-out;
+  transition: transform 500ms ease-out, visibility 300ms ease-out, opacity 300ms ease-out, -webkit-transform 500ms ease-out;
+}
+.events-container .event.current {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.events-container .event.move-left {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.event .event-title {
+  padding: 0 5rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.event .event-date {
+  color: #fff;
+}
+.dots {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+.dots li {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 0.25rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.2;
+  cursor: pointer;
+}
+.dots li.current {
+  background-color: #e6cf59;
+  opacity: 1;
+}
+/** Indicator Styles **/
+.indicator {
+  position: absolute;
+  top: 2.9rem;
+  left: 2.9rem;
+  right: 2.9rem;
+  bottom: 2.9rem;
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.indicator::before,
+.indicator::after {
+  content: "";
+  position: absolute;
+}
+.indicator::before {
+  border-top: 14.5rem solid #e5e91e;
+  border-left: 6.5rem solid transparent;
+  border-right: 6.5rem solid transparent;
+  top: 0;
+  left: calc(50% - 6.5rem);
+}
+.indicator::after {
+  height: 3.6rem;
+  border-left: 2px solid #e5e91e;
+  top: 14rem;
+  left: calc(50% - 1px);
+}
+/** Overlay Styles **/
+.overlay {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  right: 3rem;
+  bottom: 3rem;
+  border-radius: 50%;
+}
+.overlay::before,
+.overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
+.overlay::before {
+  background-image: -webkit-linear-gradient(top left, #ff671b, transparent 40%, transparent);
+  background-image: linear-gradient(top left, #ff671b, transparent 40%, transparent);
+  opacity: 0.15;
+}
+.overlay::after {
+  background-image: -webkit-linear-gradient(bottom left, #5eade4, transparent 50%, transparent);
+  background-image: linear-gradient(bottom left, #5eade4, transparent 50%, transparent);
+  opacity: 0.15;
+}

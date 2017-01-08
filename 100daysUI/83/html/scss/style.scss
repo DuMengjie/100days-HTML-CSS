@@ -1,0 +1,265 @@
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #a7a7a7;
+$color-facebook: #334a87;
+$color-twitter: #18a7eb;
+$color-instagram: #134876;
+
+$transition-time: 250ms;
+$transition-method: ease-in-out;
+
+html {
+    box-sizing: border-box;
+}
+// html
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+// body
+
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+    line-height: inherit;
+}
+// *, *:before, *:after
+
+.card-wrap {
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+
+    @media (min-width: 681px) {
+        width: 680px;
+    }
+    // @media (min-width: 681px) {
+
+    .card-social {
+        margin-bottom: 60px;
+
+        @media (min-width: 681px) {
+            float: left;
+            margin-bottom: 0;
+            margin-right: 40px;
+        }
+        // @media (min-width: 681px) {
+
+        &:last-child {
+            margin: 0;
+        }
+        // &:last-child
+
+    }
+    // .card-social
+
+}
+// .card-wrap
+
+.card-social {
+    color: $color-grey;
+    display: block;
+    font-size: 14px;
+    height: 200px;
+    line-height: 1.5;
+    position: relative;
+    width: 200px;
+
+    &:hover {
+
+        .card-social__icon {
+            font-size: 60px;
+        }
+        // .card-social__icon
+
+    }
+    // &:hover 
+
+    &__front,
+    &__back {
+        border-radius: 3px;
+        height: 100%;  
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    // &__front, &__back
+
+    &__front {
+        -webkit-transition: all $transition-time $transition-method;
+           -moz-transition: all $transition-time $transition-method;
+                transition: all $transition-time $transition-method;
+        background-color: $color-white;
+        box-shadow: 0 0 40px 0px rgba($color-black, 0.1);
+        z-index: 10;
+    }
+    // &__front 
+
+    &__back {
+        box-shadow: 0 0 90px 15px rgba($color-black, 0.1);
+    }
+    // &__back {
+
+    &__icon {
+        -webkit-transition: all $transition-time $transition-method;
+           -moz-transition: all $transition-time $transition-method;
+                transition: all $transition-time $transition-method;
+        -webkit-transform: translate(-50%, -50%);
+           -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+             -o-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        font-size: 30px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+    }
+    // &__icon 
+
+    &__data {
+        bottom: 40px;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
+    // &__data
+
+    &__action {
+        bottom: 0;
+        color: $color-white;
+        letter-spacing: 1px;
+        line-height: 40px;
+        position: absolute;
+        text-transform: uppercase;
+    }
+    // &_action
+
+}
+// .card-social
+
+.card-social--animate-top-left {
+
+    &:hover {
+
+        .card-social__front {
+            left: -40px;
+            top: -40px;
+        }
+        // .card-social__front
+
+    }
+    // &:hover 
+
+    .card-social__action {
+        right: 40px;
+    }
+    // .card-social__action
+
+}
+// .card-social--animate-top-left
+
+.card-social--animate-up {
+
+    &:hover {
+
+        .card-social__front {
+            top: -40px;
+        }
+        // .card-social__front
+
+    }
+    // &:hover 
+
+    .card-social__back {
+        left: 10px;
+        right: 10px;
+        width: auto;
+    }
+    // .card-social__back
+
+    .card-social__action {
+        -webkit-transform: translateX(-50%);
+           -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+             -o-transform: translateX(-50%);
+                transform: translateX(-50%);
+        left: 50%;
+    }
+    // .card-social__action
+
+}
+// .card-social--animate-up
+
+.card-social--animate-top-right {
+
+    &:hover {
+
+        .card-social__front {
+            left: 40px;
+            top: -40px;
+        }
+        // .card-social__front
+
+    }
+    // &:hover 
+
+    .card-social__action {
+        left: 40px;
+    }
+    // .card-social__action
+
+}
+// .card-social--animate-top-right
+
+.card-social--facebook {
+
+    .card-social__back {
+         background-color: $color-facebook;
+    }
+    // .card-social__back
+
+    .card-social__icon {
+        color: $color-facebook;
+    }
+    // .card-social__icon
+
+}
+// .card-social--facebook
+
+.card-social--twitter {
+
+    .card-social__back {
+         background-color: $color-twitter;
+    }
+    // .card-social__back
+
+    .card-social__icon {
+        color: $color-twitter;
+    }
+    // .card-social__icon
+
+}
+// .card-social--twitter
+
+.card-social--instagram {
+
+    .card-social__back {
+         background-color: $color-instagram;
+    }
+    // .card-social__back
+
+    .card-social__icon {
+        color: $color-instagram;
+    }
+    // .card-social__icon
+
+}
+// .card-social--instagram

@@ -1,0 +1,115 @@
+// custom styles
+
+.card {
+	@extend %flex;
+	justify-content: flex-end;
+	flex: 0 0 750px;
+	height: 500px;
+	background: url('../img/d026-artist.png') no-repeat left center #fff;
+	color: #8d9296;
+	box-shadow: 0 37px 35px rgba(0,0,0, .3);
+}
+
+.wrapper {
+	min-width: 450px;
+	position: relative;
+}
+
+.top {
+	padding: 80px 50px 65px 70px;
+}
+
+header {
+	@extend %flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	h1 {
+		line-height: 1;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #0f204b;
+	}
+	p {
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0;
+		b {
+			line-height: 1;
+			color: #b9edf3;
+			font-size: 36px;
+		}
+	}
+}
+
+footer {
+	p {
+		margin: 0;
+		line-height: 1;
+		&:first-of-type {
+			color: #48cbd1;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.counter {
+	margin-top: 60px;
+	p {
+		margin-bottom: 25px;
+	}
+}
+
+ul#countdown {
+	@extend %flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		flex: 0 0 55px;
+		text-transform: uppercase;
+		position: relative;
+		border: 1px solid #e1e1e1;
+		text-align: center;
+		&:not(:first-of-type)  {
+			margin-left: 40px;
+		}
+		span {
+			width: 100%;
+			font-size: 26px;
+			color: #697079;
+			opacity: .6;
+			padding: 5px 0;
+			display: block;
+		}
+		p {
+			position: absolute;
+			top: 40px;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-top: 10px;
+			text-align: center;
+			font-size: 10px;
+		}
+		&:first-of-type {
+			span {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+button.purchase {
+	width: 100%;
+	height: 90px;
+	position: absolute;
+	bottom: 0;
+	padding: 0;
+	outline: 0;
+	border: none;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+	color: #fff;
+	background-color: #b9edf3;
+	box-shadow: inset 0 2px 6px rgba(0, 0, 0, .1);
+}

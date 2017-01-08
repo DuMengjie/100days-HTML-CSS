@@ -1,0 +1,103 @@
+<html>
+  
+  <head>
+    <title>Baby monitor</title>
+    
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+<body>
+  <!-- https://d13yacurqjgara.cloudfront.net/users/3587/screenshots/2230782/dribbble_preview.jpg -->  
+
+  <div class="container">
+
+    <div class="app-card">
+      <div class="app-card_header">
+        <ul>
+          <li class="active menu-item"><a href="#">Camera</a></li>
+          <li class="menu-item"><a  href="#">Past Activity</a></li>
+        </ul>
+      </div>
+
+      <div class="app-card_content">
+        <div class="content_holder">
+          <div class="content-video">
+            <video id="video" width="640" height="480" autoplay>
+              <i>Change / update your browser</i>
+            </video>
+          </div> 
+          <div class="content-menu">
+            <span class="menu-expander" id="menu-expander"></span>
+            <ul class="menu-items">
+              <li><a href="#"><svg class="icon"><use  viewBox="32 32 32 32" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-camera" ></use></svg></a></li>
+              <li><a href="#"><svg class="icon"><use  viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video" ></use></svg></a></li>
+              <li><a href="#"><svg class="icon"><use  viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart" ></use></svg></a></li>
+              <li><a href="#"><svg class="icon"><use  viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-note" ></use></svg></a></li>
+            </ul>
+
+            <div class="block-action zoom-control">
+              <input type="range" class="range" value="10" onchange="var rangevalue;rangevalue.value=value" min="10" />
+            </div>
+            <div class="block-action direction-control">
+              <ul class="controls">
+                <li><a href="#"><svg class="icon"><use  viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-up" ></use></svg></a></li>
+                <li><a href="#"><svg class="icon"><use  viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-right" ></use></svg></a></li>
+                <li><a href="#"><svg class="icon"><use  viewBox="0 0 12 12" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-down" ></use></svg></a></li>
+                <li><a href="#"><svg class="icon"><use  viewBox="0 0 12 12" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-left" ></use></svg></a></li>
+              </ul>
+
+              <div class="pad">
+                <div class="thumb"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> 
+
+  </div> 
+
+
+  <!-- Load icons, as SVG sprite -->
+  <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-heart" viewBox="0 0 1055 1024">
+        <title>heart</title>
+        <path class="path1" d="M527.325 142.244c23.576-37.722 49.51-68.371 79.374-91.162 44.795-33.793 97.449-51.082 167.392-51.082 77.016 0 146.959 29.863 198.041 78.588s82.517 116.31 82.517 190.969c0 126.526-64.442 250.695-161.105 374.864-94.305 120.239-218.474 238.907-342.643 357.575l-23.576 22.005-23.576-22.005c-124.169-118.668-248.338-237.335-342.643-357.575-96.663-123.383-161.105-248.338-161.105-374.864 0-74.658 31.435-142.244 82.517-190.969s121.025-78.588 198.041-78.588c119.454 0 187.039 47.153 246.766 142.244v0zM648.35 105.308c-33.793 25.934-62.084 66.8-90.376 121.025l-29.863 57.369-29.863-57.369c-55.012-105.308-109.237-158.748-216.903-158.748-58.941 0-112.381 22.79-150.889 59.727-37.722 36.15-61.299 86.447-61.299 142.244 0 109.237 58.941 220.832 146.959 333.213 84.875 108.451 198.041 217.688 311.994 327.711 114.738-110.023 227.119-219.26 311.994-327.711 88.018-112.381 146.959-223.975 146.959-333.213 0-55.797-23.576-106.094-61.299-142.244-38.508-36.936-91.948-59.727-150.889-59.727-53.44 0-93.52 12.574-125.741 36.936l-0.786 0.786z"></path>
+      </symbol>
+      <symbol id="icon-note" viewBox="0 0 1024 1024">
+        <title>note</title>
+        <path class="path1" d="M1001.152 15.008c-11.616-9.76-26.176-15.008-41.12-15.008-3.68 0-7.424 0.32-11.136 0.992l-544.064 96c-30.592 5.376-52.864 31.936-52.864 63.008v549.44c-32.48-23.552-74.624-37.44-121.408-37.44-27.2 0-54.4 4.512-80.928 13.312-60.736 20.256-109.44 60.864-133.632 111.488-18.688 39.136-21.088 81.696-6.848 119.872 24.352 65.216 93.536 107.328 176.256 107.328 27.2 0 54.4-4.448 80.896-13.312 60.704-20.192 109.408-60.8 133.6-111.36 10.4-21.824 15.264-44.672 15.456-67.328h0.576v-512c3.68 0 7.424-0.32 11.136-0.928l532.96-94.048v388.416c-32.512-23.552-74.624-37.44-121.44-37.44-27.2 0-54.432 4.512-80.928 13.312-60.736 20.256-109.44 60.864-133.568 111.488-18.688 39.136-21.12 81.696-6.88 119.872 24.384 65.216 93.504 107.328 176.256 107.328 27.2 0 54.432-4.448 80.928-13.312 60.672-20.192 109.376-60.8 133.568-111.36 10.432-21.824 15.264-44.672 15.488-67.328h0.576v-672c0-18.88-8.384-36.864-22.88-48.992v0zM246.016 950.016c-76.672 25.568-155.936 0.576-176.928-55.68-21.056-56.32 24.032-122.688 100.672-148.256 76.672-25.568 155.936-0.64 176.928 55.68 21.088 56.288-24 122.688-100.672 148.256v0zM852.896 854.016c-76.736 25.568-156 0.576-176.992-55.68-21.056-56.32 24.064-122.688 100.672-148.256 76.736-25.568 156-0.64 176.992 55.68 21.088 56.288-23.968 122.688-100.672 148.256v0zM958.72 160l-544.064 96v-96l544.064-96v96z"></path>
+      </symbol>
+      <symbol id="icon-video" viewBox="0 0 1024 1024">
+        <title>video</title>
+        <path class="path1" d="M960 192h-28.384c-16.8 0-32.928 6.624-44.928 18.432l-86.688 85.504v-39.936c0-53.024-43.008-96-96-96h-608c-52.928 0-96 43.040-96 96v512c0 52.992 42.976 96 96 96h608c52.992 0 96-43.008 96-96v-39.072l86.688 85.504c12 11.808 28.128 18.432 44.928 18.432h28.384c35.328 0 64-28.64 64-64v-512.864c0-35.36-28.672-64-64-64zM96 800c-17.664 0-32-14.368-32-32v-512c0-17.696 14.304-32 32-32h608c17.632 0 32 14.336 32 32v512c0 17.632-14.368 32-32 32h-608zM960 768.864h-32l-128-128v-0.864l-32-32v-192l160-160h32v512.864z"></path>
+      </symbol>
+      <symbol id="icon-camera" viewBox="0 0 1024 1024">
+        <title>camera</title>
+        <path class="path1" d="M512 320.032c-141.408 0-256 114.592-256 256 0 141.376 114.592 256 256 256 141.376 0 256-114.624 256-256s-114.624-256-256-256zM657.76 700.992c-68.992 80.512-190.176 89.824-270.688 20.8-80.544-68.992-89.824-190.208-20.8-270.688 68.96-80.544 190.176-89.824 270.688-20.8 80.48 68.96 89.792 190.208 20.8 270.688zM512 448.032c8.832 0 16 7.168 16 16s-7.168 16-16 16c-53.024 0-95.968 42.976-96 95.968v0.064c0 8.8-7.168 16-16 16s-16-7.2-16-16v-0.064c0.032-70.656 57.312-127.968 128-127.968zM943.744 289.344l-138.688-23.136-43.936-109.888c-14.688-36.64-49.696-60.32-89.12-60.32h-320c-39.424 0-74.432 23.68-89.152 60.352l-43.904 109.856-138.656 23.136c-46.528 7.712-80.288 47.52-80.288 94.656v480c0 52.928 43.072 96 96 96h832c52.928 0 96-43.072 96-96v-480c0-47.136-33.76-86.944-80.256-94.656zM960 864c0 17.696-14.304 32-32 32h-832c-17.696 0-32-14.304-32-32v-480c0-15.648 11.328-28.992 26.752-31.552l174.208-29.024 57.312-143.296c4.896-12.128 16.64-20.128 29.728-20.128h320c13.056 0 24.8 7.968 29.696 20.128l57.312 143.296 174.24 29.024c15.424 2.56 26.752 15.904 26.752 31.552v480z"></path>
+      </symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 640 1024">
+        <title>chevron-down</title>
+        <path class="path1" d="M512 320l-192 192-192-192-128 128 320 320 320-320-128-128z"></path>
+      </symbol>
+      <symbol id="icon-chevron-left" viewBox="0 0 448 1024">
+        <title>chevron-left</title>
+        <path class="path1" d="M448 320l-128-128-320 320 320 320 128-128-192-192 192-192z"></path>
+      </symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 448 1024">
+        <title>chevron-right</title>
+        <path class="path1" d="M128 192l-128 128 192 192-192 192 128 128 320-320-320-320z"></path>
+      </symbol>
+      <symbol id="icon-chevron-up" viewBox="0 0 640 1024">
+        <title>chevron-up</title>
+        <path class="path1" d="M320 256l-320 320 128 128 192-192 192 192 128-128-320-320z"></path>
+      </symbol>
+    </defs>
+  </svg>
+  <script src="hammer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

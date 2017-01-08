@@ -1,0 +1,52 @@
+// General Styles
+body, html {
+	height: 100%;
+	min-height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	@include font-smoothing;
+	font-family: $primary-font;
+	background: url('../img/d091-bg.png') no-repeat center;
+	background-size: cover;
+	@extend %flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	transform: perspective(800px);
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	line-height: 1;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin-top: 0;
+}
+
+img, embed, object, video, svg {
+	max-width: 100%;
+}
+
+input, textarea {
+	font-family: $primary-font;
+	font-size: 1.6rem;
+}

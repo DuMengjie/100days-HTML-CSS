@@ -1,0 +1,147 @@
+body, html {
+  height: 100%;
+  min-height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  background: url("../img/d040-bg.png") no-repeat center;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+img, embed, object, video, svg {
+  max-width: 100%;
+}
+
+input, textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+body, .card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  -webkit-flex: 0 0 700px;
+      -ms-flex: 0 0 700px;
+          flex: 0 0 700px;
+  height: 510px;
+  position: relative;
+  color: #666666;
+}
+
+.media {
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  position: relative;
+  background-color: #787d80;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.media:hover,
+.media:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #2b8fff;
+  box-shadow: 53px 53px 75px 0px rgba(0, 0, 0, 0.19);
+}
+
+.media:last-of-type {
+  margin-left: 40px;
+}
+
+.wrapper {
+  width: 310px;
+  padding: 10px 80px 60px 60px;
+  margin: -10px 0 0 -10px;
+  background-color: white;
+  box-shadow: 43px 43px 57px 0px rgba(0, 0, 0, 0.19);
+}
+
+header, footer {
+  padding: 50px 0;
+  font-size: 14px;
+  line-height: 1;
+}
+
+header {
+  border-bottom: 1px solid #e0dfec;
+}
+
+header p {
+  margin: 0;
+  color: #afaeae;
+}
+
+footer span {
+  color: #afaeae;
+  margin-bottom: 10px;
+}
+
+footer p:first-of-type {
+  margin-top: 5px;
+  margin-bottom: 0;
+  letter-spacing: -0.5px;
+}
+
+footer p:last-of-type {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 55px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #787d80;
+  font-weight: lighter;
+}
+
+a.purchase {
+  position: absolute;
+  left: 50px;
+  bottom: 40px;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */

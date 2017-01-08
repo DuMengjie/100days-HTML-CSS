@@ -1,0 +1,140 @@
+body, html {
+  height: 100%;
+  min-height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(800px);
+          transform: perspective(800px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", arial;
+  font-weight: 500;
+  background-color: #ecebf0;
+  font-size: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+img, embed, object, video, svg {
+  max-width: 100%;
+}
+
+body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  -webkit-flex: 0 0 860px;
+      -ms-flex: 0 0 860px;
+          flex: 0 0 860px;
+  height: 630px;
+  position: relative;
+  border-radius: 4px;
+  background-color: #75d4da;
+  color: #fff;
+}
+
+.card:before {
+  content: '';
+  width: 100%;
+  height: 636px;
+  position: absolute;
+  top: -2px;
+  right: -37px;
+  z-index: 0;
+  background: url("../img/day063-bg.png") no-repeat right top;
+  background-size: cover;
+}
+
+.card:after {
+  content: '';
+  width: 860px;
+  height: 630px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  position: relative;
+  max-width: 50%;
+  padding: 85px 0 0 80px;
+  z-index: 10;
+}
+
+.content span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.content h1 {
+  margin: 50px 0;
+  font-size: 48px;
+  font-family: "Cambo", Georgia, serif;
+  font-weight: 400;
+}
+
+.content p {
+  line-height: 1.2;
+  margin-bottom: 35px;
+}
+
+.sep {
+  width: 20px;
+  height: 2px;
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+button.read-more {
+  width: 140px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  box-shadow: 0 14px 54px rgba(244, 246, 80, 0.57);
+  background-color: #f4f650;
+  color: #45484c;
+  outline: 0;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,83 @@
+// custom styles
+
+.card {
+	@extend %flex;
+	flex: 0 0 700px;
+	height: 510px;
+	position: relative;
+	color: $color4;
+}
+
+.media {
+	flex: 0 0 50%;
+	position: relative;
+	background-color: $color3;
+	cursor: pointer;
+	transition: .4s;
+	&:hover,
+	&:focus {
+		transform: scale(1.1);
+		background-color: $color1;
+		box-shadow: 53px 53px 75px 0px rgba(0, 0, 0, 0.19);
+	}
+	&:last-of-type {
+		margin-left: 40px;
+	}
+}
+
+.wrapper {
+	width: 310px;
+	padding: 10px 80px 60px 60px;
+	margin: -10px 0 0 -10px;
+	background-color: white;
+	box-shadow: 43px 43px 57px 0px rgba(0,0,0,0.19);
+}
+
+header, footer {
+	padding: 50px 0;
+	font-size: 14px;
+	line-height: 1;
+}
+
+header {
+	border-bottom: 1px solid #e0dfec;
+	p {
+		margin: 0;
+		color: $color2;
+	}
+}
+
+footer {
+	span {
+		color: $color2;
+		margin-bottom: 10px;
+	}
+	p {
+		&:first-of-type {
+			margin-top: 5px;
+			margin-bottom: 0;
+			letter-spacing: -0.5px;
+		}
+		&:last-of-type {
+			margin-top: 30px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+h1 {
+	font-size: 55px;
+	margin-top: 0;
+	margin-bottom: 10px;
+	color: $color3;
+	font-weight: lighter;
+}
+
+a.purchase {
+	position: absolute;
+	left: 50px;
+	bottom: 40px;
+	color: #fff;
+	font-size: 16px;
+	text-transform: uppercase;
+}

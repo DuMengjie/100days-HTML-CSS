@@ -1,0 +1,183 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", arial;
+  font-weight: 400;
+  background: url("../img/d019-bg.png") no-repeat center top;
+  background-size: cover;
+  font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+img, embed, object, video, svg {
+  max-width: 100%;
+}
+
+body, .header, .media, .team, .counter {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-flex: 0 0 400px;
+      -ms-flex: 0 0 400px;
+          flex: 0 0 400px;
+  height: 620px;
+  position: relative;
+  border-radius: 4px;
+  background: url("../img/d019-shot.png") no-repeat center top #fff;
+  color: #666666;
+}
+
+.card .wrapper {
+  z-index: 10;
+  padding: 0 40px;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: -1;
+  background: url("../img/d019-shadow.png") no-repeat center;
+}
+
+.header {
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 140px 0 40px;
+}
+
+span.likes {
+  padding-left: 20px;
+  font-size: 14px;
+  background: url("../img/d019-heart.png") no-repeat left top 4px;
+}
+
+.media {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.media .body {
+  margin-left: 30px;
+}
+
+.media h3 {
+  font-size: 24px;
+  color: #2c2c2c;
+}
+
+.media p {
+  color: #999999;
+}
+
+.team {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+}
+
+.team p {
+  font-size: 14px;
+  color: #999999;
+}
+
+.team img {
+  margin-left: 25px;
+}
+
+.counter {
+  padding-top: 30px;
+  border-top: 1px solid #e4e9e9;
+}
+
+.counter div {
+  position: relative;
+}
+
+.counter div:not(:first-of-type) {
+  margin-left: 60px;
+}
+
+.counter div span:last-of-type {
+  display: block;
+  padding-top: 42px;
+  font-size: 14px;
+  color: #999999;
+}
+
+.counter span.js-countup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 38px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #333333;
+}
+
+button.profile {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  outline: 0;
+  padding-left: 40px;
+  border: none;
+  text-align: left;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: url("../img/d019-arrow.png") no-repeat right 40px center #f2f2f2;
+  color: #666666;
+}
+/*# sourceMappingURL=style.css.map */

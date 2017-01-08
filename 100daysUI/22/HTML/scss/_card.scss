@@ -1,0 +1,101 @@
+// custom styles
+
+.card {
+	@extend %flex;
+	flex: 0 0 880px;
+	height: 612px;
+	position: relative;
+	justify-content: flex-end;
+	color: $color1;
+}
+
+h1,h2,h3 {
+	color: $color2;
+}
+
+h2,h3 {
+	text-transform: uppercase;
+}
+
+h1 {
+	font-family: "Playfair Display", georgia;
+	font-size: 60px;
+	line-height: 0.8;
+}
+
+h2 {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 60px;
+}
+
+h3 {
+	font-size: 14px;
+	margin-bottom: 25px;
+	&:last-of-type {
+		margin-top: 50px;
+	}
+}
+
+p {
+	margin: 0;
+}
+
+button {
+	width: 100%;
+	height: 42px;
+	margin-top: 120px;
+	font-size: 12px;
+	border: none;
+	background: white;
+	text-transform: uppercase;
+	outline: 0;
+}
+
+.tabs {
+	position: absolute;
+	top: 0;
+	left: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	li {
+		opacity: .3;
+		margin-bottom: 25px;
+		a {
+			color: #000;
+		}
+		&.active {
+			opacity: 1;
+		}
+	}
+}
+
+// Mouse
+.mouse {
+	flex: 0 0 505px;
+	position: relative;
+	text-align: right;
+	background: url('../img/d022-layers.png') no-repeat right center;
+	img {
+		width: auto;
+		height: 100%;
+		margin-right: 20px;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background: url('../img/d022-dots.png') no-repeat right 59% top;
+	}
+}
+
+// Info
+.info {
+	flex: 0 0 240px;
+	margin-left: 70px;
+}

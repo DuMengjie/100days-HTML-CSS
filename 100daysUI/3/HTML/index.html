@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>D003 - Dial Pad</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <div class="content">
+    <!-- Card -->
+    <div class="card">
+      <!-- Contact -->
+      <div class="contacts">
+
+        <div class="contact">
+          <img src="img/d003-contact1.png" alt="Contact" />
+          <div class="info">
+            <span class="name">Derek Teal</span>
+            <span class="number">+40 <b>0742</b> 723 233</span>
+          </div>
+        </div>
+
+        <div class="contact">
+          <img src="img/d003-contact2.png" alt="Contact" />
+          <div class="info">
+            <span class="name">Simon Burtton</span>
+            <span class="number">+40 <b>0742</b> 554 784</span>
+          </div>
+        </div>
+
+        <div class="contact">
+          <img src="img/d003-contact3.png" alt="Contact" />
+          <div class="info">
+            <span class="name">Penny Bart</span>
+            <span class="number">+41 <b>0742</b> 143 020</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dial-pad">
+        <!-- Dialer Input -->
+        <div class="dialer-input">
+          <span class="add">+</span>
+          <input type="text" id="number" value="0742" maxlength="9"></input>
+          <span class="remove">+</span>
+        </div>
+        <!-- Dialer Group -->
+        <div class="dialer-group">
+
+          <div class="dialer" id="1">
+            <span>1</span>
+          </div>
+
+          <div class="dialer" id="2">
+            <span>2</span>
+            <span>abc</span>
+          </div>
+
+          <div class="dialer" id="3">
+            <span>3</span>
+            <span>def</span>
+          </div>
+
+          <div class="dialer" id="4">
+            <span class="number">4</span>
+            <span class="text">ghi</span>
+          </div>
+
+          <div class="dialer" id="5">
+            <span>5</span>
+            <span>jkl</span>
+          </div>
+
+          <div class="dialer" id="6">
+            <span>6</span>
+            <span>mno</span>
+          </div>
+
+          <div class="dialer" id="7">
+            <span>7</span>
+            <span>pqrs</span>
+          </div>
+
+          <div class="dialer" id="8">
+            <span>8</span>
+            <span>tuv</span>
+          </div>
+
+          <div class="dialer" id="9">
+            <span>9</span>
+            <span>wxyz</span>
+          </div>
+
+          <div class="dialer" id="*">
+            <span>*</span>
+          </div>
+
+          <div class="dialer" id="0">
+            <span>0</span>
+            <span>+</span>
+          </div>
+
+          <div class="dialer" id="#">
+            <span>#</span>
+          </div>
+
+        </div>
+        <!-- Loader -->
+        <div class="double-bounce">
+          <div class="child double-bounce1"></div>
+          <div class="child double-bounce2"></div>
+        </div>
+        <div class="call-number"></div>
+        <!-- Call Button -->
+        <div class="call-btn btn"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/jquery-2.1.4.min.js"></script> <!-- jQuery -->
+  <script src="js/main.js"></script> <!-- Main Script -->
+</body>
+</html>

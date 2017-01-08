@@ -1,0 +1,297 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  color: #676767;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  line-height: inherit;
+}
+
+.card-movie__details:after, .card-movie__details-list:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.card-movie-wrapper {
+  box-shadow: 0px 0px 100px 25px rgba(0, 0, 0, 0.2);
+  height: 440px;
+  position: relative;
+  width: 840px;
+}
+.card-movie-wrapper:hover .card-movie-carousel {
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  bottom: 60px;
+  right: 40px;
+}
+
+.card-movie-wrapper--centered {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
+
+.card-movie-carousel {
+  -webkit-transition: all 250ms ease-in-out 250ms;
+  -moz-transition: all 250ms ease-in-out 250ms;
+  transition: all 250ms ease-in-out 250ms;
+  height: 440px;
+  width: 840px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.card-movie-navigation {
+  background-color: #fff;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 15;
+}
+.card-movie-navigation__list {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 18px;
+}
+.card-movie-navigation__list li {
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  background-color: #ccc;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 12px;
+  margin: 0 auto 6px;
+  width: 12px;
+}
+.card-movie-navigation__list li:last-child {
+  margin-bottom: 0;
+}
+.card-movie-navigation__list li.is-active {
+  height: 18px;
+  width: 18px;
+}
+.card-movie-navigation__list li:hover {
+  background-color: #bbb;
+}
+.card-movie-navigation button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  bottom: 0;
+  color: #aac8ca;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 60px;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  right: 40px;
+}
+.card-movie-navigation button:before {
+  content: 'Watch Trailer';
+}
+.card-movie-navigation button:after {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #dce9e9;
+  border-top: 6px solid transparent;
+  content: '';
+  height: 0;
+  margin-right: 6px;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  width: 0;
+}
+.card-movie-navigation button.is-playing:before {
+  content: 'Hide Trailer';
+}
+.card-movie-navigation button.is-playing:after {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  margin-top: -6px;
+}
+
+.card-movie {
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  background-size: cover;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: 20;
+}
+.card-movie__content {
+  left: 330px;
+  position: absolute;
+  top: 150px;
+}
+.card-movie__title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+  margin-left: -4px;
+  text-transform: uppercase;
+}
+.card-movie__details {
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+.card-movie__details-item {
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+.card-movie__details-list li {
+  float: left;
+  margin-right: 5px;
+  padding-right: 6px;
+  position: relative;
+}
+.card-movie__details-list li:after {
+  content: '|';
+  position: absolute;
+  right: 0;
+}
+.card-movie__details-list li:last-child {
+  margin-right: 0;
+}
+.card-movie__details-list li:last-child:after {
+  display: none;
+}
+.card-movie__description {
+  font-size: 14px;
+  max-width: 390px;
+}
+.card-movie__rating {
+  bottom: 16.66667px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 50px;
+  position: absolute;
+  right: 16.66667px;
+  text-align: center;
+  width: 50px;
+}
+.card-movie__rating:after {
+  border-radius: 100%;
+  border: 2px solid #ee927b;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.card-movie__player {
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 0;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  z-index: 20;
+}
+.card-movie--playing .card-movie__player {
+  height: 440px;
+  width: 840px;
+}
+.card-movie__player iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.card-movie--active {
+  opacity: 1;
+  z-index: 25;
+}
+
+.card-movie--light {
+  background-color: #effdfd;
+}
+.card-movie--light [class*='__title'] {
+  color: #000;
+}
+
+.card-movie--dark {
+  background-color: #000;
+  color: #fff;
+}
+.card-movie--dark [class*='__title'] {
+  color: #fff;
+}
+
+.card-movie--looper {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/looper.png");
+}
+
+.card-movie--tron {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/tron.png");
+}
+
+.card-movie--interstellar {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/interstellar.png");
+  background-color: #fffffa;
+}
+
+.card-movie--garden-state {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/garden-state.png");
+}
+
+.card-movie--walter-mitty {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/walter-mitty.png");
+}
+
+.card-movie--cloud-atlas {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/43525/cloud-atlas.png");
+}

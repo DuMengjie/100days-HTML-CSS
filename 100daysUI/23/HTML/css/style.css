@@ -1,0 +1,218 @@
+/* GENERAL */
+body {
+  background-color: #FFCC66;
+  font-family: 'Roboto'
+}
+
+/* INTRO TEXT */
+.inspiration {
+  color: rgba(0, 0, 0, .4);
+  font-family: 'Arial';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
+  margin: 32px auto 0;
+  text-align: center;
+  width: 900px;
+}
+
+.inspiration a {
+  color: rgba(0, 0, 0, .4);
+}
+
+.inspiration a:hover {
+  color: rgba(0, 0, 0, .6);
+}
+
+/* CONTAINER */
+.container {
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, .2);
+  height: 800px;
+  margin: 32px auto;
+  overflow: hidden;
+  width: 900px;
+}
+
+/* MAIN - RIGHT PART */
+.main {
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  padding: 32px;
+  vertical-align: top;
+  width: auto;
+}
+
+h2 {
+  color: #727586;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+h2 b {
+  color: #444750;
+  font-size: 32px;
+  margin-left: 80px;
+}
+
+.main h2 {
+  border-bottom: solid 1px #DDD;
+  padding-bottom: 48px;
+}
+
+.item {
+  margin: 48px 0;
+  position: relative;
+}
+
+.item-sign {
+  border-radius: 36px;
+  border: solid 4px #EEE;
+  color: #888;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 900;
+  height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  width: 24px;
+}
+
+.item-name {
+  color: #444750;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 50px;
+}
+
+.item-description {
+  color: #999;
+  font-family: 'Roboto Mono';
+  font-size: 13px;
+  margin-left: 50px;
+}
+
+.item-price {
+  color: #8392C9;
+  font-size: 22px;
+  font-weight: 500;
+  position: absolute;
+  right: 0;
+  top: 6px;
+}
+
+.item-price.green {
+  color: #65CC33;
+}
+
+/* SIDEBAR - LEFT PART */
+.sidebar {
+  background: #F2F2F2;
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  padding: 32px;
+  width: 33.33%;
+}
+span.plus {
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  transform: translate(250px, -64px);
+}
+
+span.plus::before {
+  background: #CCC;
+  border-radius: inherit;
+  content: "";
+  display: inline-block;
+  height: 32px;
+  transform: translate(16px, 2px);
+  width: 5px;
+}
+
+span.plus::after {
+  background: #CCC;
+  border-radius: inherit;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  transform: translate(-2px, -11px);
+  width: 32px;
+}
+
+span.plus:hover::before,
+span.plus:hover::after {
+  background: #BBB;
+}
+
+span.plus:active::before,
+span.plus:active::after {
+  background: #AAA;
+}
+
+.card {
+  background: #FFF;
+  border-radius: 3px;
+  border: solid 3px #CCC;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  height: 170px;
+  margin-bottom: 32px;
+  padding: 20px;
+  width: 300px;
+}
+
+.selected,
+.card:hover {
+  border: solid 4px #8392C9;
+}
+
+.card:active {
+  border: solid 4px #6574AB;
+}
+
+.card-visa,
+.card-amex,
+.card-mastercard {
+  border-radius: 0px;
+  height: 44px;
+  overflow: hidden;
+  position: relative;
+  width: 67px;
+}
+
+.card-visa img {
+  position: absolute;
+  transform: translate(-546px, -364px) scale(.5);
+}
+
+.card-amex img {
+  position: absolute;
+  transform: translate(-651px, -218px) scale(.5);
+}
+
+.card-mastercard img {
+  position: absolute;
+  transform: translate(-755px, -364px) scale(.5);
+}
+
+.card-number {
+  color: #666;
+  font-family: 'Roboto Mono';
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 16px;
+}
+
+.card-val {
+  color: #B3B3B3;
+  font-family: 'Roboto Mono';
+  margin-top: 12px;
+}

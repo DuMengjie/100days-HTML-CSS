@@ -1,0 +1,190 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500);
+@import 'bourbon';
+
+$color-brown: #cead89;
+$color-brown-light: #ddc1a3;
+$color-white-alt: #fefcfa;
+$color-tan: #fdf3e9;
+$color-gray: #818994;
+$color-gray-light: #CCCDCE;
+$color-gray-dark: #666666;
+$color-blue: #50b2fb;
+
+$transition-time: 250ms;
+$transition-method: ease-in-out;
+
+html {
+    background-color: #f8e9da;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+// html
+
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+// *, *:before, *:after
+
+a {
+    @include transition(color $transition-time $transition-method);
+    color: $color-blue;
+    position: relative;
+    text-decoration: none;
+ 
+    &:hover {
+      color: darken($color-blue, 15%);
+    }
+    // &:hover
+  
+}
+// a
+
+.modal {
+    @include transform(translate(-50%, -50%));
+    background-color: $color-white-alt;
+    border-radius: 10px;
+    box-shadow: 0px 50px 100px 15px $color-brown;
+    color: #737373;
+    display: none;
+    font-size: 16px;
+    left: 50%;
+    line-height: 1.5;
+    max-width: 560px;
+    min-height: 200px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 1000;
+  
+    &__button {
+        @include transition(all $transition-time $transition-method);
+        background-color: $color-tan;
+        color: $color-gray;
+        display: block;
+        line-height: 70px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+      
+        &:before {
+            content: attr(data-text);
+            position: relative;
+            z-index: 10;
+        }
+        // &:before 
+      
+        &:after {
+            @include transition(top $transition-time $transition-method);
+            background-color: darken($color-tan, 5%);
+            content: '';
+            height: 100%;
+            left: 0%;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            z-index: 5;
+        }
+        // &:after
+      
+        &:hover {
+            color: $color-white-alt;
+            
+            &:after {
+                top: 0;
+            }
+            // &:after
+          
+        }
+        // &:hover 
+      
+        &:focus {
+            background-color: $color-white-alt;
+            color: $color-gray-light;
+          
+            &:after {
+                top: 100%;
+            }
+            // &:after
+          
+        }
+        // &:focus
+
+        [class*='-2-col'] & {
+
+            &:first-child {
+                border-right: 1px solid $color-white-alt;
+            }
+            // &:first-child 
+
+            &:last-child {
+                border-left: 1px solid $color-white-alt;
+            }
+            // &:last-child
+
+        }
+        // [class*='-2-col'] &
+      
+    }
+    // &__button
+  
+    &__content {
+        color: $color-gray-dark;
+        font-weight: 500;
+        padding: 45px 50px 30px;
+      
+      p {
+          margin-bottom: 20px;
+        
+          &:last-child {
+              margin-bottom: 0;
+          }
+          // &:last-child
+        
+          &.is-light {
+              color: $color-gray-light;
+              font-weight: 400;
+          }
+          // &.is-light
+
+          &.has-extra-margin-bottom {
+              margin-bottom: 40px;
+          }
+          // &.has-extra-margin-bottom
+        
+      }
+      // p
+      
+    }
+    // &__content
+
+}
+// modal
+
+[class*='-2-col'] {
+    @include clearfix();
+  
+    > * {
+        float: left; 
+        width: 50%;
+    }
+    // > *
+  
+}
+// [class*='-2-col']
+
+.open-modal {
+    @include transform(translate(-50%, -50%));
+    cursor: pointer;
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+}
+// .open-modal 

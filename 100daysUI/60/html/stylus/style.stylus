@@ -1,0 +1,176 @@
+/** Mixins **/
+center-children()
+    display flex
+    justify-content center
+    align-items center
+
+
+/** Base Styles **/
+*
+*::before
+*::after
+    margin 0
+    padding 0
+    box-sizing border-box
+
+
+html
+    font-size 62.5%
+
+
+body
+    center-children()
+    height 100vh
+    font-family "Roboto", "Myriad Pro", sans-serif
+    line-height 1
+    background url("http://i1067.photobucket.com/albums/u422/arnellebalane/background_zpsifao5spd.jpg") center center no-repeat
+    background-size cover
+    user-select none
+
+
+/** Knob Styles **/
+.knob
+    center-children()
+    width 50rem
+    height 50rem
+    position relative
+
+
+.knob-outer
+    center-children()
+    width 33rem
+    height 33rem
+    position relative
+    z-index 1
+    border-radius 50%
+    background-color #42444a
+    overflow hidden
+
+    &::before
+        content ""
+        position absolute
+        left -10rem
+        bottom 5rem
+        width 10rem
+        height 10rem
+        border-radius 50%
+        box-shadow 0 0 10rem 10rem #d5a362
+        opacity 0.25
+
+
+.knob-inner
+    center-children()
+    flex-direction column
+    width 24rem
+    height 24rem
+    position relative
+    border-radius 50%
+    background-color #f2f2f2
+    overflow hidden
+
+
+.knob-value
+    width 12rem
+    height 12rem
+    margin 2rem 0
+    position relative
+    z-index 1
+    font-size 6rem
+    font-weight 100
+    text-align center
+    line-height 12rem
+    color #71727b
+    border-radius 50%
+    background-color #fff
+
+
+.knob-value-progress
+    height 0
+    position absolute
+    left 0
+    right 0
+    bottom 0
+    background-color #d8e3ea
+    transition height 500ms ease-out
+
+
+.knob-arrow
+    width 4rem
+    height 1.5rem
+    position relative
+    z-index 1
+    cursor pointer
+    outline none
+
+    &::before
+    &::after
+        content ""
+        width 2.4rem
+        height 3px
+        position absolute
+        top 0
+        left 50%
+        background-color #ccc
+        transform-origin left center
+        transform rotate(30deg)
+
+    &::after
+        transform rotate(150deg)
+
+
+    &.down::before
+    &.down::after
+        top auto
+        bottom 0
+        transform rotate(-30deg)
+
+    &.down::after
+        transform rotate(-150deg)
+
+
+.knob-indicator
+    width 1rem
+    height 1rem
+    border 1px solid #fff
+    position absolute
+    top calc(50% - 0.5rem)
+    left calc(50% - 0.5rem)
+    z-index 1
+    border-radius 50%
+    cursor pointer
+    transition background-color 250ms ease-out
+    
+    &:hover
+        background-color #fff
+
+
+.progress-label
+    width 10rem
+    position absolute
+    top 50%
+    font-size 1.4rem
+    text-align center
+    text-transform uppercase
+    color #a0a2a9
+
+    &.contrast
+        left -2.5rem
+        transform rotate(-90deg)
+
+    &.brightness
+        right -2.5rem
+        transform rotate(90deg)
+
+
+/** Progress Bars Styles **/
+.progress-bars
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+
+
+    path
+        stroke-dashoffset 605
+        transition stroke-dashoffset 500ms ease-out

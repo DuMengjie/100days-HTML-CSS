@@ -1,0 +1,264 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+img, embed, object, video, svg {
+  max-width: 100%;
+}
+
+input, textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+.content, .middle, .bottom, header, .input-group {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  background: url("../img/d004-bg.png") no-repeat center;
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+}
+
+.content:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: .1;
+  background: url("../img/d004-after.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.middle, .bottom {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.middle {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.bottom {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.card {
+  -webkit-flex: 0 0 850px;
+      -ms-flex: 0 0 850px;
+          flex: 0 0 850px;
+  height: 530px;
+  background: white;
+  border-radius: 10px;
+  z-index: 10;
+  transition: background 0.4s;
+}
+
+.card.completed {
+  background: #018ffd;
+}
+
+header {
+  background: #018ffd;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 60px 50px;
+}
+
+header h3 {
+  color: white;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+header img {
+  width: auto;
+  height: 40px;
+}
+
+footer {
+  padding: 50px;
+  position: relative;
+}
+
+label {
+  width: 100%;
+  display: block;
+  font-size: 12px;
+  color: #999999;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+input, select {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #999999;
+  border-radius: 6px;
+  outline: 0;
+  padding: 0 20px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 18px;
+  color: #343232;
+  background: white;
+}
+
+input:focus, select:focus {
+  border-color: #81c8ff;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("../img/d004-down.png") no-repeat right 20px center;
+}
+
+.input-group {
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0 -20px;
+  transition: .4s;
+}
+
+.completed .input-group {
+  opacity: 0;
+}
+
+.column {
+  padding: 0 20px;
+}
+
+.details {
+  margin-bottom: 50px;
+}
+
+.details .column {
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.info .column {
+  -webkit-flex: 0 0 33.33%;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
+}
+
+#check {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -45px;
+  margin-top: -80px;
+}
+
+.check {
+  visibility: hidden;
+  stroke-dasharray: 130px 130px;
+  stroke-dashoffset: 130px;
+  transition: stroke-dashoffset 500ms ease-in-out;
+}
+
+.completed .check {
+  visibility: visible;
+  stroke-dashoffset: 0;
+}
+
+button.submit {
+  width: 365px;
+  height: 55px;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+  background: transparent;
+  border: 1px solid #018ffd;
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0 -1px 0 0;
+  padding-left: 23px;
+  outline: 0;
+  z-index: 10;
+}
+
+button.submit span {
+  padding-right: 32px;
+  position: relative;
+}
+
+button.submit span:after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  background: url("../img/d004-arrows.png") no-repeat;
+}
+
+button.submit:hover,
+button.submit:focus {
+  background: #018ffd;
+}
+
+button.submit:hover span:after,
+button.submit:focus span:after {
+  background-position: -16px 0;
+}
+/*# sourceMappingURL=style.css.map */

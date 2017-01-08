@@ -1,0 +1,134 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", arial;
+  font-weight: 400;
+  background: url("../img/d024-bg.png") no-repeat center;
+  background-size: cover;
+  font-size: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+img, embed, object, video, svg {
+  max-width: 100%;
+}
+
+body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  -webkit-flex: 0 0 580px;
+      -ms-flex: 0 0 580px;
+          flex: 0 0 580px;
+  height: 545px;
+  position: relative;
+  border-radius: 10px;
+  background: linear-gradient(#313032, #1c1a1d);
+  box-shadow: 0 24px 81px rgba(0, 0, 0, 0.65), 0 9px 32px rgba(0, 0, 0, 0.4);
+  color: #5c5c5c;
+  text-align: center;
+}
+
+.card img {
+  margin: 60px 0 30px;
+}
+
+.card p {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.card hr {
+  width: 30px;
+  height: 2px;
+  margin-bottom: 45px;
+  background-color: #585858;
+  border: none;
+}
+
+input,
+button {
+  width: 350px;
+  height: 50px;
+  outline: 0;
+  border-radius: 2px;
+  border: none;
+  text-align: center;
+}
+
+input {
+  margin-bottom: 20px;
+  color: #333333;
+  padding: 0 15px;
+}
+
+input:focus {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.44);
+}
+
+::-webkit-input-placeholder {
+  color: #999999;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #999999;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #999999;
+}
+
+:-ms-input-placeholder {
+  color: #999999;
+}
+
+button {
+  transition: .3s;
+  text-transform: uppercase;
+  background: #a77d53;
+  color: #fff;
+}
+
+button:hover, button:focus {
+  background: #c48d56;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.44);
+}
+/*# sourceMappingURL=style.css.map */
