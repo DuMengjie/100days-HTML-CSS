@@ -1,4 +1,4 @@
-# 100days-HTML&CSS
+# 100days-HTML-CSS
 
 100天HTML&CSS挑战，每天完成一个网页，素材来自[100daysUI](http://100daysui.com/)。
 
